@@ -58,8 +58,7 @@ void *heap::realloc(void *__prev, std::size_t __size)
             if(record[i].heap_location == __prev)
             {
                 found = true;
-                record[i].status = __alloc;
-                record[i].heap_location = heap_ptr;
+                record[i] = {heap_ptr, __alloc};
                 break;
             }
         }
