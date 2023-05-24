@@ -54,7 +54,7 @@ void *heap::realloc(void *__prev, std::size_t __size)
     {
         for(std::size_t i = record.size(); i > 0; )
         {
-            i --;
+            --i;
             if(record[i].heap_location == __prev)
             {
                 found = true;
@@ -100,7 +100,7 @@ void heap::free(void *__add)
     bool found = false;
     for(std::size_t i = record.size(); i > 0; )
     {
-        i --;
+        --i;
         if((record[i].heap_location == __add) && record[i].status == __alloc)
         {
             found = true;
@@ -124,7 +124,7 @@ void heap::tear_down(void)
     }
     for(std::size_t i = record.size(); i > 0; )
     {
-        i --;
+        --i;
         if(record[i].status == __alloc)
         {
             std::free(record[i].heap_location);
