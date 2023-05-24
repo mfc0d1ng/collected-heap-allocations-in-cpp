@@ -28,12 +28,10 @@ static void print_ptrerror(void)
 
 void *heap::malloc(std::size_t __size)
 {
-    struct location location;
     void *heap_ptr = std::malloc(__size);
     if(heap_ptr != nullptr)
     {
-        location.status = __alloc;
-        location.heap_location = heap_ptr;
+        struct location location = {heap_ptr, __alloc};
         record.push_back(location);
     }
     else
@@ -80,12 +78,10 @@ void *heap::realloc(void *__prev, std::size_t __size)
 
 void *heap::calloc(std::size_t __nmemb, std::size_t __size)
 {
-    struct location location;
     void *heap_ptr = std::calloc(__nmemb, __size);
     if(heap_ptr != nullptr)
     {
-        location.status = __alloc; 
-        location.heap_location = heap_ptr;
+        struct location location = {heap_ptr, __alloc};
         record.push_back(location); 
     }
     else
