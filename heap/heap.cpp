@@ -19,13 +19,10 @@ static void print_memerror(void)
     std::exit(0x1);
 }
 
-static void print_ptrerror(bool __found)
+static void print_ptrerror(void)
 {
-    if(__found == false)
-    {
-        std::puts(ptrerror);
-        std::exit(0x2);
-    }
+    std::puts(ptrerror);
+    std::exit(0x2);
 }
 
 
@@ -73,7 +70,10 @@ void *heap::realloc(void *__prev, std::size_t __size)
     {
         print_memerror();
     }
-    print_ptrerror(found);
+    if(found == false)
+    {
+        print_ptrerror();
+    }
     return heap_ptr;
 }
 
@@ -114,7 +114,10 @@ void heap::free(void *__add)
             break;
         }
     }
-    print_ptrerror(found);
+    if(found == false)
+    {
+        print_ptrerror();
+    }
 }
 
 
