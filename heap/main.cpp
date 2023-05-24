@@ -4,7 +4,6 @@
 
 int main(int argc, char *argv[])
 {
-
     char *ptr = (char *) heap::malloc(12);
     memcpy(ptr, "Hello world", 12);
 
@@ -12,6 +11,5 @@ int main(int argc, char *argv[])
     memcpy(ptr, "Hello world, Again.", 20);
 
     std::puts(ptr); 
-
     return EXIT_SUCCESS;
 }
