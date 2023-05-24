@@ -2,8 +2,8 @@
 #include <vector>
 #include "heap.h"
 
-#define memerror  "Out of memory. program terminated."
-#define ptrerror  "Invalid pointer. program terminated."
+#define memerror  "Out of memory, program terminated."
+#define ptrerror  "Invalid pointer, program terminated."
 
 struct location
 {
