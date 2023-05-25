@@ -23,7 +23,7 @@ public:
     /* Free a block allocated by `heap::malloc', `heap::realloc' or `heap::calloc'.  */
     static void free(void *__add);
 
-    /* Free all the memory blocks in the record. */
+    /* Free all the memory blocks. */
     static void tear_down(void);
 
 };
