@@ -20,7 +20,7 @@ public:
     /* Allocate NMEMB elements of SIZE bytes each, all initialized to 0.  */
     static void *calloc(std::size_t __nmemb, std::size_t __size);
 
-    /* Free a block allocated by `malloc', `realloc' or `calloc'.  */
+    /* Free a block allocated by `heap::malloc', `heap::realloc' or `heap::calloc'.  */
     static void free(void *__add);
 
     /* Free all the memory blocks in the record. */
