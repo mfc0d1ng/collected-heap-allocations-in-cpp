@@ -131,10 +131,3 @@ void heap::tear_down(void)
         }
     }
 }
-
-
-void tear_down(void)
-{
-    heap::tear_down();
-}
-
