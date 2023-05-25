@@ -16,8 +16,8 @@ int main(int argc, char *argv[])
     std::puts(ptr); 
     
     /*  
-        // Try this
-        std::free(ptr);
+    // Try this
+    std::free(ptr);
     */
     
     heap::tear_down();
