@@ -13,5 +13,7 @@ int main(int argc, char *argv[])
     memcpy(ptr, "Hello world, Again.", 20);
 
     std::puts(ptr); 
+    
+    heap::tear_down();
     return EXIT_SUCCESS;
 }
