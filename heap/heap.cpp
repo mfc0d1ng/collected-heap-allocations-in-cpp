@@ -11,7 +11,7 @@ struct location
     unsigned char status;
 }__attribute__((packed));
 
-std::vector<struct location> record;
+static std::vector<struct location> record;
 
 static void print_memerror(void)
 {
