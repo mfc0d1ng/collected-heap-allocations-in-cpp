@@ -28,11 +28,4 @@ public:
 
 };
 
-#define _Hardcoded_mode_   0x0
-#define _Automatic_mode_   0x1
-#define _tear_down_       _Automatic_mode_
-#if     _tear_down_  ==   _Automatic_mode_
-void tear_down(void) __attribute__((destructor)); 
-#endif
-
 #endif
