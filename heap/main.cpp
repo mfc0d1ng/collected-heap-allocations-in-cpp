@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 
     heap::show_record(); 
 
-    std::cout << "\nYou have allocated " << heap::count() << " memory blocks\n";
+    std::cout << "\nYou have allocated " << heap::count() << " memory blocks.\n";
 
     /* Try this */
     /* std::free(ptr); */
