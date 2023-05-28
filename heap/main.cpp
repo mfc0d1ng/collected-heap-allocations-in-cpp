@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 
     std::puts(ptr);
     
-    for (size_t i = 0; i < 50; i++)
+    for (size_t i = 0; i < 50; ++i)
     {
         heap::malloc(25); 
     }
@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 
     std::cout << "\nYou have allocated " << heap::count() << " memory blocks\n";
 
-    // Try this */
+    /* Try this */
     /* std::free(ptr); */
     /* std::free(heap::malloc(25)); */
 
