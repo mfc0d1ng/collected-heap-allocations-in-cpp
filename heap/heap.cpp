@@ -123,7 +123,7 @@ void heap::show_record(void)
         {
             if(i && i % 4 == 0)
             {
-                printf("%s", "\n ");
+                std::printf("%s", "\n ");
             }
             std::printf("%p, ", record[i]);
         }
