@@ -114,7 +114,7 @@ void heap::show_record(void)
     }
     else
     {
-        std::puts("\nNo memory blocks has been allocated.");
+        std::puts("\nNo memory blocks have been allocated.");
     }
     std::size_t i = 0;
     for(std::size_t j = record.size(); i < j; i++)
